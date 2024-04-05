@@ -167,26 +167,27 @@ export const SubTitle = styled.div`
 `;
 
 export const ResumeButton = styled.a`
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  text-decoration: none;
-  width: 95%;
-  max-width: 300px;
-  text-align: center;
-  padding: 16px 0;
-  color: #ffffff;
-  border-radius: 20px;
-  border: 8px solid transparent;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 600;
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  &:hover {
-    transform: scale(1.2);
-    transition: all 0.2s ease-in-out;
-    filter: brightness(1);
-  }    
+border: 1.8px solid ${({ theme }) => theme.primary};
+justify-content: center;
+max-width: 300px;
+display: flex;
+align-items: center;
+height: 50px;
+border-radius: 20px;
+color: ${({ theme }) => theme.primary};
+cursor: pointer;
+padding: 0 20px;
+font-weight: 600;
+text-decoration: none;
+font-size: 22px;
+transition: all 0.3s ease-in-out;
+  :hover {
+    background: ${({ theme }) => theme.primary};
+    color: white;
+  }
+  @media screen and (max-width: 768px) { 
+  font-size: 14px;
+  }  
   
   @media (max-width: 640px) {
     padding: 12px 0;
